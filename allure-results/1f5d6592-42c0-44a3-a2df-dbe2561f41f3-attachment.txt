@@ -1,0 +1,4 @@
+Before Each Test
+Test4
+After Each Test
+After All Test

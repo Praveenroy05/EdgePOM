@@ -3,28 +3,28 @@ import { LoginPage } from '../pages/LoginPage'
 import { DashboardPage } from '../pages/DashboardPage'
 import products from '../TestData/products.json'
 
-
-
 let loginPage : LoginPage
 let dashboardPage : DashboardPage
-for(let data of products){
-test.beforeEach(async ({page})=>{
-    loginPage = new LoginPage(page)
-    dashboardPage = new DashboardPage(page)
-    await  loginPage.launchURL(data.url)
-})
 
-    test("Add the product to cart", async ()=>{
+    test.beforeEach(async ({page})=>{
+        loginPage = new LoginPage(page)
+        dashboardPage = new DashboardPage(page)
+    })
+
+for(let data of products){
+    test(`Add the product to cart for ${data.productName}`, async ()=>{
+        await  loginPage.launchURL(data.url)
         await loginPage.loginIntoApplication(data.username, data.password)
         await dashboardPage.searchAndAddProductToCart(data.productName)
         await expect(dashboardPage.addToCartSuccessMsg).toHaveText("Product Added To Cart")
     })
 
-    test("Search and validate the product", async ()=>{
+    test("Search and validate the product for"+ data.productName, async ()=>{
         await  loginPage.launchURL(data.url)
         await loginPage.loginIntoApplication(data.username, data.password)
         await dashboardPage.searchAndViewProductDetails(data.productName)
-        await expect(dashboardPage.viewPageProductName).toHaveText(data.productName.toLowerCase())
+        const productText = await dashboardPage.viewPageProductName.innerText()
+        await expect(productText.toLowerCase()).toBe(data.productName.toLowerCase())
     })
 }
 
@@ -66,7 +66,9 @@ test.beforeEach(async ({page})=>{
 //     console.log(element.productName);
 // }
 
-// Allure
+// Excel - 
+// Allure -
 // github
 // jenkins
 // AI
+
