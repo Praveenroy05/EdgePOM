@@ -15,7 +15,13 @@
 // 5. Add all the changes in your local git - git add .
 // 6. Commit the changes in your local git - git commit -m "message" Ex: - git commit -m "added dashboard page test"
      // 6.1 - You can rebase your changes with the master branch
-     // 6.2 - 
+     // 6.2 - Move to the master branch - git checkout master
+     // 6.3 - Pull all the changes into your local - git pull
+     // 6.4 - Move to the feature branch - git checkout featurebranchname
+     // 6.5 - Rebase all the changes from master branch to featurebranch - 
+     // git rebase origin/master
+
+// 7. Push all the changes to the remote repository - git push -u origin featurebranchname - git push -u origin dashboardPage
 
 
 
