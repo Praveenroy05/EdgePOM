@@ -22,3 +22,7 @@ console.log(Human["salary"]);
 
 // This is a new line available for dadhboard page branch
 // This is a new line
+
+const price = {
+ "Phone" : 100000
+}
