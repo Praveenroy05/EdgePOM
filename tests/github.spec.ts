@@ -22,6 +22,15 @@
      // git rebase origin/master
 
 // 7. Push all the changes to the remote repository - git push -u origin featurebranchname - git push -u origin dashboardPage
+// 8. Raise a Pull Request (PR)
+
+
+// Again when you start wotking for the new requirement
+
+// 9.Switch to master branch - git checkout master - Need to pull all the latest changes inside your local system - git pull
+// 10. Follw the same steps from #3 to #8 everytime
+
+
 
 
 
