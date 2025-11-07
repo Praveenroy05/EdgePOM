@@ -18,3 +18,6 @@ console.log(Human.address.country);
 // Object[key]
 console.log(Human.salary);
 console.log(Human["salary"]);
+
+
+// This is a new line available for dadhboard page branch
