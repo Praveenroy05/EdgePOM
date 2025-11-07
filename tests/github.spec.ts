@@ -32,7 +32,16 @@
 
 
 
+// If you are the first person who is developing the framework
 
+// 1. Create Repository inside github 
+// 2. git init
+// 3. git add .
+// 4. git commit -m "first commit"
+// 5. git branch -M master
+// 6. git remote add origin https://github.com/Praveenroy05/Test.git
+// 7. git push -u origin main
+// 8. Follow step 3 to step 8 everytime
 
 
 
