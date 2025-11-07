@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fullTest": "npx playwright test tests/DPDDTest.spec.ts --reporter=html"
+    "fullTest": "npx playwright test tests/DPDDTest.spec.ts --reporter=html",
+    "smokeTest" : "npx playwright test -g @smoke",
+     "regressiontest" : "npx playwright test -g @regression"
   },
   "keywords": [],
   "author": "",
