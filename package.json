@@ -6,7 +6,7 @@
   "scripts": {
     "fullTest": "npx playwright test tests/DPDDTest.spec.ts --reporter=html",
     "smokeTest" : "npx playwright test -g @smoke",
-     "regressiontest" : "npx playwright test -g @regression"
+    "regressiontest" : "npx playwright test -g @regression"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.4.2",
     "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "playwright": "^1.56.1"
   }
 }
